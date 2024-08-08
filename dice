@@ -1,0 +1,27 @@
+import time
+
+def random(): #0~999
+    return round(time.time()*1000)%1000
+
+def random1(): #1~6
+    return (random()%6)+1
+
+print("請按下Enter按鍵進行擲骰子，號碼為1到6，按下Ctrl+C離開")
+print("2、3、4、1 各167個，5、6 各166個，2、3、4、1 各個機率:0.167，5、6 各個機率:0.166。")
+result = []
+try:
+    while 1:
+        input()
+        result.append(random1())
+        print(result[-1])
+except:
+    pass
+
+if len(result)>0:
+    print(f"您共擲{len(result)}次")
+    for i in range(6):
+        i += 1
+        count = 0
+        for j in result: 
+            if j==i: count += 1
+        print(f"{i}:您擲到{count}次，實際抽到的機率是{count/len(result)}")
