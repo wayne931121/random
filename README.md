@@ -1,2 +1,3 @@
-# random
-The random script generate 0~999 values by using python.
+這是一個不用random模組就能創建隨機數的腳本，random.py是使用人類無法精準控制時間的原理，該腳本會返回程式執行時的毫秒時間，也就是按下時的時間，數值為0到999，而dice.py腳本使用數學運算進一步將0到999這個回傳數字改成1到6，並統計理想機率與實際機率的差別。
+
+This is a script that can create random numbers without using the random module. random.py uses the principle that humans cannot accurately control time. The script will return the millisecond time when the program is executed, which is the time when it is pressed, and the value is 0 to 999, and the dice.py script uses mathematical operations to further change the returned numbers from 0 to 999 to 1 to 6, and counts the difference between the ideal probability and the actual probability.
